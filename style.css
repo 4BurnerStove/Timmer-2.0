@@ -5,13 +5,19 @@
   border: none;
 }
 
+.whiteProperty {
+  background-color: white;
+}
+
 :root {
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 
 
   --hue: 144;
   --bTn-press-color: #000;
   --bg-body-color-hue: 00;
+  
 
   --bTn-color: hsla(240, 6%, 21%, 1);
   --bTn-color-press: hsla(0, 0%, 100%, 1);
@@ -22,8 +28,24 @@
   --color-svg-buttons: hsla(var(--hue), 72%, 66%, 1);
 }
 
+#resetColorButton {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 999px;
+
+  display: flex;
+  position: absolute;
+  top: 15.6rem;
+  left: 15.2rem;
+  padding: 1.5rem
+}
+
+
 #buttons svg path {
   fill: #000;
+}
+
+#OthersBTn {
+  position: relative;
 }
 
 #OthersBTn svg path {
@@ -47,7 +69,6 @@
 body {
   background-color: var(--bg-bTn-color-press);
   transition: background-color 1400ms;
-  font-family: 'Roboto', sans-serif;
 
   display: grid;
   min-height: 65vh;
@@ -62,7 +83,7 @@ body {
 }
 
 .ButtonsDisplays {
-  background:hsla(0, 0%, 100%, 1)(var(--bTn-press-color), 97%, 31%, 50%);
+  background: (var(--bTn-press-color), 97%, 31%, 50%);
 }
 
 .container {
@@ -102,10 +123,20 @@ span {
 }
 
 @media(max-width: 910px) {
-  
   body {
     margin-top: 2rem;
   }
+
+  #OthersBTn {
+    position: relative;
+  }
+
+  #resetColorButton {  
+    top: 11.7rem;
+    left: 11.9rem;
+    padding: 1.3rem
+  }
+  
 
   .container {
     display: flex;

@@ -5,10 +5,11 @@ export const sound = {
   fireSound: new Audio('./sounds/Lareira.wav'),
   bellSound: new Audio('https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'),
 
-  stopSounds(snd1, snd2, snd3) {
+  stopSounds(snd1, snd2, snd3, snd4) {
     snd1.pause()
     snd2.pause()
     snd3.pause()
+    snd4.pause()
   }
 }
 

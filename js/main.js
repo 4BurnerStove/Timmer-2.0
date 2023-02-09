@@ -13,14 +13,17 @@ const {
   ButtonPlay,
   ButtonResume,
   minutesDisplay,
-  secondsDisplay 
+  secondsDisplay,
+  ResetAllColors,
+  BodyClass
 } = Buttons
 
 const CostumizeFunctions = Costumize({
   ButtonCloud,
   ButtonFire,
   ButtonTree,
-  ButtonMarket
+  ButtonMarket,
+  BodyClass
 })
 
 
@@ -30,6 +33,8 @@ const TimerFunctions = timmer({
   buttonStopFunction
 })
 
+
+ResetAllColors.addEventListener('click', CostumizeFunctions.ResetColor)
 ButtonTree.addEventListener('click', CostumizeFunctions.TreeFunction)
 ButtonCloud.addEventListener('click', CostumizeFunctions.CloudFunction)
 ButtonMarket.addEventListener('click', CostumizeFunctions.MarketFunction)
@@ -41,6 +46,7 @@ ButtonMoreMinutes.addEventListener('click', TimerFunctions.MoreTime)
 ButtonLessMinutes.addEventListener('click', TimerFunctions.LessTime)
 
 // Events
+
 
 function buttonStopFunction() {
   TimerFunctions.resetTimer()

@@ -1,10 +1,13 @@
   const ButtonMoreMinutes = document.querySelector('.ButtonMoreMinutes')
   const ButtonLessMinutes = document.querySelector('.ButtonLessMinutes')
-  
+
+
+  const BodyClass = document.querySelector('body')  
   const ButtonStop = document.querySelector('.stop')
   const ButtonResume = document.querySelector('.resume')
   const ButtonPlay = document.querySelector('.play')
-  
+
+  const ResetAllColors = document.querySelector('#resetColorButton')
   const ButtonTree = document.querySelector('#tree')
   const ButtonCloud = document.querySelector('#cloud')
   const ButtonMarket = document.querySelector('#market')
@@ -25,7 +28,9 @@
     ButtonLessMinutes,
     ButtonFire,
     ButtonPlay,
-    ButtonResume
+    ButtonResume,
+    ResetAllColors,
+    BodyClass
   }
 
 
