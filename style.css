@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+
+  --hue: 144;
+  --bTn-press-color: #000;
+  --bg-body-color-hue: 00;
+
+  --bTn-color: hsla(240, 6%, 21%, 1);
+  --bTn-color-press: hsla(0, 0%, 100%, 1);
+  
+
+  --bg-bTn-color: hsla(var(--hue), 9%, 89%, 1);
+  --bg-bTn-color-press: hsla(var(--bTn-press-color), 97%, 31%, 55%);
+  --color-svg-buttons: hsla(var(--hue), 72%, 66%, 1);
+}
+
+#buttons svg path {
+  fill: #000;
+}
+
+#OthersBTn svg path {
+  fill: var(--bTn-color);
+}
+
+.resume svg path {
+  fill: #000;
+}
+
+#OthersBTn .press svg path {
+  fill: var(--bTn-color-press);
+  transition: fill 900ms;
+}
+
+#OthersBTn .ButtonPress {
+  background-color: var(--bg-bTn-color-press);
+  transition: background-color 900ms;
+}
+
+body {
+  background-color: var(--bg-bTn-color-press);
+  transition: background-color 1400ms;
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  min-height: 65vh;
+}
+
+#OthersBTn {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-areas:
+    'A B'
+    'C D';
+}
+
+.ButtonsDisplays {
+  background:hsla(0, 0%, 100%, 1)(var(--bTn-press-color), 97%, 31%, 50%);
+}
+
+.container {
+  gap: 19.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  align-self: end;
+}
+
+.hide {
+  display: none;
+}
+
+#buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.card {
+  border-radius: 2.4rem;
+  padding: 4.8rem;
+  background-color: var(--bg-bTn-color);
+  transition: background-color 900ms;
+}
+
+button {
+  background: #ffffff;
+  cursor: pointer;
+}
+
+span {
+  font-size: 12.8rem;
+}
+
+@media (max-width: 910px) {
+  body {
+    margin-top: 2rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  #timmer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  span {
+    margin: 0 auto;
+    font-size: 8.6rem;
+  }
+
+  .card {
+    padding: 3.8rem;
+  }
+
+  #buttons svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  #OthersBTn svg {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}
